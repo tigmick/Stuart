@@ -1,0 +1,270 @@
+/* ==========================================================================
+   Blog pages
+   ========================================================================== */
+
+body.page-template-property, 
+body.page-template-experience { 
+
+	main {
+
+		.top-details {
+			background-color: $white;
+			position: absolute;
+			bottom: 0; left: 50%;
+			transform: translateX(-50%);
+			width: $pageWidth;
+			height: $colSpacing*4;
+			z-index: 10;
+			padding: 0;
+			color: $pri;
+			margin: 0 auto;
+			display: flex;
+			align-items: center;
+			text-align: center;
+			border: 1px solid $light;
+			border-bottom: 0;
+
+			h1,p,ul {
+				padding: $colSpacing;
+				margin: 0;
+			}
+
+			h1 {
+				position: relative;
+				flex: 1;
+			}
+
+			ul,
+			p {
+				padding: 0;
+				list-style: none;
+				flex: 1;
+
+				li {
+					display: inline-block;
+					margin-right: $colSpacing;
+				}
+			}
+		}
+
+		.fold {
+			margin: 0 $colSpacing $colSpacing;
+			position: relative;
+			overflow: hidden;
+		}
+	
+		nav {
+			width: 100%;
+			background-color: $bg;
+			padding: $colSpacing*0.75 $colSpacing;
+			border-top: 1px solid $light;
+			border-bottom: 1px solid $light;
+
+			ul {
+				margin: 0 auto;
+				position: relative;
+
+				li {
+					&:last-of-type {
+						position: absolute;
+						left: 50%;
+						top: 50%;
+						transform: translate(-50%, -50%);
+
+						a:before,
+						a:after {
+							display: none;
+						}
+
+						a:hover {
+							color: $white;
+						}
+					}
+				}
+			}
+			&.fixed {
+				position: fixed;
+				top: 0;
+				z-index: 99;
+			}
+		}
+
+		.feature {
+			.mood-gallery {
+				display: flex;
+				
+				.mood-image {
+					flex: 1;
+					overflow: hidden;
+					border-left: 1px solid $bg;
+
+					&:first-of-type {
+						border-left: 0;
+					}
+				}
+			}
+
+			.twoCol {
+
+				article {
+					div {
+						padding-right: $colSpacing;
+						margin: auto;
+					}
+				}
+
+				.col {
+					align-items: flex-start;
+				}
+
+				.host {
+					background-color: $pri;
+					color: $bg;
+					text-align: center;
+					padding: 0 $colSpacing*2 $colSpacing;
+					border-radius: 0 0 $br $br;
+					position: relative;
+					
+					.avatar {
+						border: 5px solid $bg;
+						position: relative;
+						z-index: 1;
+					}
+
+					h3 {
+						em {
+							color: $light;
+							font-style: normal;
+						}
+					}
+
+					.signature {
+						position: absolute;
+						bottom: $colSpacing;
+						left: 50%;
+						transform: translateX(-50%);
+						height: $colSpacing;
+						width: auto;
+					}
+				}
+			}
+		}
+		.col-no-over,
+		.info .col {
+			background-color: $white;
+			overflow: hidden;
+			position: relative;
+		}
+
+		.col {
+			.video-showcase {
+				position: absolute;
+				top: 50%; left: 50%;
+				display: block;
+				z-index: 16;
+				width: 40px;
+				height: 40px;
+				background-position: 0 -125px;
+				transform: translate(-50%, -50%);
+			}
+
+			img.crop {
+				height: auto;
+				width: 100%;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+			}
+		}
+
+		.rates {
+
+			img {
+				width: 100%;
+				height: auto;
+			}
+
+			aside {
+				display: flex;
+				vertical-align: center;
+				padding: $colSpacing 0;
+				text-align: center;
+				background-color: $white;
+				border-radius: 0 0 $br $br;
+				position: relative;
+
+				div {
+					flex: 1;
+				}
+
+				.more-info {
+					position: absolute;
+					top: -$colSpacing;
+					transform: translateY(-100%);
+					right: $colSpacing;
+					background-position: -40px -125px;
+					width: 40px;
+					height: 40px;
+				}
+			}
+		}
+
+		.calendar {
+			.availability {
+				padding: $colSpacing;
+				text-align: center;
+			}
+		}
+
+		.book {
+
+			.twoCol {
+				align-items: flex-start;
+
+				.booking-form {
+					margin: 0 $colSpacing*2;
+
+					form {
+						padding: $colSpacing;
+						background-color: $white;
+					}
+
+					aside {
+						background-color: $white;
+						border-top: $colSpacing*0.5 solid $bg;
+						padding: $colSpacing 0;
+						text-align: center;
+
+						p {
+							margin: 0;
+						}
+					}
+				}
+
+				.region-details {
+					background-color: $white;
+					border-radius: 0 0 $br $br;
+				}
+			}
+		}
+		
+		.critic {
+			background-color: $light;
+			text-align: center;
+			padding: 0 $colSpacing*2 $colSpacing;
+			min-height: 100%;
+
+			.avatar {
+				border: 5px solid $light;
+			}
+
+			h3 {
+				em {
+					color: lighten($pri, 10%);
+					font-style: normal;
+				}
+			}
+		}
+	}
+}

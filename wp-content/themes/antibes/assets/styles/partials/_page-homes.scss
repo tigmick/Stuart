@@ -1,0 +1,102 @@
+/* ==========================================================================
+   Region page
+   ========================================================================== */
+
+body.page-template-homes,
+body.page-template-region {
+
+	#content {
+		main {
+			min-height: 60vh;
+
+			#map_wrapper {
+
+				header {
+					display: flex;
+					position: relative;
+					transform: translateY(-50%);
+					z-index: 99;
+					background-color: $pri;
+					align-items: center;
+
+					.section-title,
+					nav {
+						position: relative;
+						transform: none;
+					}
+
+					.spacer {
+						flex: 1;
+					}
+
+					.section-title {
+						height: $colSpacing*2;
+						max-width: 50%;
+						h1 {
+							margin: 0;
+							line-height: $colSpacing;
+						}
+					}
+					nav {
+						flex: 1;		
+						height: $colSpacing;
+
+						ul {
+							justify-content: center;
+							margin: 0 $colSpacing;
+							border-left: 1px solid $darkBorder;
+							border-right: 1px solid $darkBorder;
+
+							li {
+								display: inline-block;
+								flex: 1;
+								padding: $colSpacing/2;
+								position: relative;
+
+								a {
+									position: absolute;
+									left: 0; right: 0;
+									top: 0; bottom: 0;
+									border-right-color: $darkBorder;
+									font-size: $small;
+									color: $light;
+
+									&:before,
+									&:after {
+										content: none!important;
+									}
+								}
+
+								&:last-of-type {
+									a {
+										border-right: 0;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+
+			.list_wrapper {
+				display: flex;
+				margin-left: 40%;
+				width: 100%;
+				flex-wrap: wrap;
+				padding: 0 $colSpacing;
+
+				.post-children {
+					flex: 1;
+					flex-grow: 0;
+					min-width: 49%;
+					margin: 0 2% 2% 0;
+					max-height: 300px;
+
+					&:nth-of-type(even) {
+						margin-right: 0;
+					}
+				}
+			}
+		}
+	}
+}

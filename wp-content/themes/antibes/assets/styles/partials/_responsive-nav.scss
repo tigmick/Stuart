@@ -1,0 +1,155 @@
+@media only screen 
+and (max-width : 800px) { 
+
+	#mobile-nav {
+		display: block;
+	}
+
+	#page {
+		#masthead {
+			nav {
+				ul {
+					
+					.mobile-menu {
+						display: block;
+						text-align: right;
+						flex: 1;
+						height: 35px;
+
+						.menu-toggle {
+							cursor: pointer;
+							height: 35px;
+							width: 35px;
+							padding: 0;
+							background-position: -105px -165px;
+							display: inline-block;
+							border-right: 0;
+
+							&:before,
+							&:after {
+								display: none;
+							}
+						}
+					}
+
+
+					li {
+						display: none;
+
+						&.instagram,
+						&.facebook {
+							display: block;
+							a {
+								margin: 0 $colSpacing 0 0;
+							}
+						}
+					}
+				} 
+			}
+		}
+	}
+	
+	body {
+	  width: 100%;
+	  height: 100%;
+	}
+
+	.slideout-menu {
+	  position: fixed;
+	  top: 0;
+	  bottom: 0;
+	  width: 256px;
+	  min-height: 100vh;
+	  overflow-y: scroll;
+	  -webkit-overflow-scrolling: touch;
+	  z-index: 0;
+	  display: none;
+	  background-color: $light;
+
+	  .zigzag {
+	  	width: 50px;
+	  	margin: 57.5px auto; // It has a 5px height and the header is 120px high
+	  }
+
+	  ul {
+	  	display: block;
+	  	padding: 0 $colSpacing*1.5;
+
+	  	li {
+	  		width: 100%;
+		  	text-align: left;
+	  		display: block;
+	  		font-family: 'Voltaire', sans-serif;
+	  		font-size: 125%;
+	  		margin-bottom: $colSpacing/2;
+
+	  		a {
+	  			width: auto;
+		  		padding: 5px 5px 5px 0;
+		  		display: inline-block;
+
+	  			&:before,
+	  			&:after {
+	  				display: none;
+	  			}
+	  		}
+
+	  		.sub-menu {
+	  			margin: $colSpacing/4 0 $colSpacing/2;
+	  			padding: 0;
+
+	  			li {
+						font-family: 'Dosis', sans-serif;
+						font-size: 12px;
+						margin-bottom: 0;
+
+						a {
+							position: relative;
+							padding-left: $colSpacing/2;
+
+							&:before {
+								display: block;
+								opacity: 1;
+								left: 0;
+								top: 50%;
+								transform: translateY(-50%);
+								margin: 0;
+								width: 3px; height: 3px;
+							}
+						}
+					}
+	  		}
+	  	}
+	  }
+	}
+
+	.slideout-menu-left {
+	  left: 0;
+	}
+
+	.slideout-menu-right {
+	  right: 0;
+	}
+
+	.slideout-panel {
+	  position: relative;
+	  z-index: 1;
+	  will-change: transform;
+	  background-color: $bg; /* A background-color is required */
+	  min-height: 100vh;
+		-moz-box-shadow:    1px 0 3px lighten($pri, 60%);
+		-webkit-box-shadow: 1px 0 3px lighten($pri, 60%);
+		box-shadow:         1px 0 3px lighten($pri, 60%);
+	}
+
+	.slideout-open,
+	.slideout-open body,
+	.slideout-open .slideout-panel {
+	  overflow: hidden;
+	}
+
+	.slideout-open .slideout-menu {
+	  display: block;
+	}
+
+}

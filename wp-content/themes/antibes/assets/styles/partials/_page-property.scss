@@ -1,0 +1,152 @@
+/* ==========================================================================
+   Blog pages
+   ========================================================================== */
+
+body.page-template-property { 
+
+	main {
+
+		.fold {
+
+			img {
+				height: auto!important;
+				position: relative;
+				top: 50%;
+				transform: translateY(-50%);
+
+			}
+		}
+	
+		nav {
+
+			ul {
+
+				li {
+
+					&:nth-of-type(10n-7) {
+						flex: 1;
+						opacity: 0;
+						position: relative;
+						z-index: -1;
+
+						a:before,
+						a:after {
+							display: none;
+						}
+					}
+
+					&:nth-of-type(3n+2) {
+						a {
+							border-right: 0;
+						}
+					}
+				}
+			}
+		}
+
+		.truths {
+			.twoCol {
+
+				.col:first-of-type {
+					background: $white;	
+				}
+
+				.facilities {
+					position: relative;
+					padding: $colSpacing*1.5 $colSpacing $colSpacing;
+
+					ul {
+						padding: 0;
+						width: 100%;
+						display: flex;
+						flex-wrap: wrap;
+						align-items: top;
+						list-style: none;
+
+						li {
+							position: relative;
+							flex: 1;
+							min-width: 50%;
+							padding: $colSpacing*0.1 $colSpacing;
+
+							i {
+								display: inline-block;
+								position: absolute;
+								left: 0;
+								width: 20px;
+								height: 20px;
+								background-position: -100px -100px;
+							}
+						}
+					}
+
+					.promise {
+
+						h4 {
+							min-width: 100%;
+							text-align: center;
+							margin-top: $colSpacing*2;
+							text-transform: uppercase;
+						}
+
+						.promises {
+							display: flex;
+
+							figure {
+								flex: 1;
+								margin: 0;
+								text-align: center;
+								font-size: 10px;
+
+								.sprite-global {
+									padding: 0;
+									width: 35px;
+									height: 35px;
+									display: inline-block;
+								}
+
+								.sprite-welcome {
+									background-position: 0 -165px;
+								}
+
+								.sprite-cleaning {
+									background-position: -35px -165px;
+								}
+
+								.sprite-toiletries {
+									background-position: -70px -165px;
+								}
+
+								.sprite-sheets {
+									background-position: 0px -200px;
+								}
+
+								.sprite-support {
+									background-position: -35px -200px;
+								}
+							}
+						}
+					}
+
+					&:after {
+						content: 'hand picked promise';
+						text-transform: uppercase;
+						font-family: 'Voltaire', sans-serif;
+						background-color: $cta;
+						color: $white;
+						font-size: $small;
+						line-height: $colSpacing;
+						height: $colSpacing;
+						display: block;
+						position: absolute;
+						bottom: 0;
+						left: 50%;
+						transform: translate(-50%, 50%);
+						border-radius: $colSpacing/2;
+						padding: 0 $colSpacing/2;
+					}
+				}
+			}
+		}
+	}
+}

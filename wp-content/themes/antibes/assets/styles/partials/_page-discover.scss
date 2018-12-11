@@ -1,0 +1,132 @@
+/* ==========================================================================
+   Discover page
+   ========================================================================== */
+
+#discoverFold {
+	margin: 0 $colSpacing $colSpacing;
+	position: relative;
+	overflow: hidden;
+
+	img {
+		height: auto!important;
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+
+	header {
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		background-color: $white;
+		padding: $colSpacing/1.3 $colSpacing*3 $colSpacing*1.3;
+		width: 100%;
+		max-width: $readWidth;
+		text-align: center;
+		border: 1px solid $light;
+
+		h1 {
+			margin: 0;
+		}
+
+		.button {
+			position: absolute;
+			bottom: 0; left: 50%;
+			transform: translate(-50%, 50%);
+		}
+	}
+}
+
+.foldPeeper {
+	position: relative;
+	margin: -15vh 0 0;
+
+	.twoCol {
+		display: flex;
+
+		.col {
+			flex: 1;
+			background-color: $white;
+
+			.host {
+				padding: 0 $colSpacing*2 $colSpacing;
+				text-align: center;
+
+				.avatar {
+					border: 5px solid $white;
+				}
+
+				h3 {
+					color: $cta;
+				}
+			}
+		}
+	}
+
+	.fullCol {
+		padding: $colSpacing*4;
+		margin-bottom: $colSpacing*2;
+		text-align: center;
+		background: no-repeat url('assets/images/global/top-ten-bg.png') center center $cta;
+		background-size: 70%;
+
+		img {
+			max-width: 100%;
+			margin-bottom: 2em;
+			width: 350px;
+		}
+
+		h2,
+		p {
+			color: $white;
+		}
+
+		p:last-of-type {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.page-discover {
+	.parent-discover {
+		position: relative;
+	}
+
+	.parent-details {
+		&:last-of-type {
+			h2 {
+				margin-top: 5vh;
+			}
+		}
+	}	
+
+	.parent-discover,
+	.parent-homes {
+
+		.post-children {
+
+			&.guide-link {
+				position: relative;
+
+				.img-container {
+					height: 100%;
+					min-height: 330px;
+					background-color: #df8f47;
+
+					img {
+						top: 0; left: 0;
+						width: 100%;
+						height: auto;
+						transform: none;
+					}
+				}
+
+				.details {
+					position: absolute;
+					bottom: $colSpacing;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,165 @@
+/* ==========================================================================
+   Category pages
+   ========================================================================== */
+
+.parent-page {
+	display: flex;
+	flex-wrap: wrap;
+	position: relative;
+}
+
+.parent-details {
+	width: 100%;
+	justify-content: center;
+	text-align: center;
+	color: $pri;
+	padding: $colSpacing/2;
+
+	h1,
+	h2,
+	h3 {
+		font-size: 150%;
+		letter-spacing: 1px;
+		line-height: 1.2em;
+		margin: 0; padding: 0;
+	}
+}
+
+.parent-homes,
+.parent-experiences,
+.parent-discover-cat,
+.parent-region,
+.parent-discover {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	padding: 0;
+
+	header {
+		min-width: 100%;
+	}
+
+	.post-children {
+		flex: 0 0 23.5%;
+		position: relative;
+		margin: 0 2% 2% 0;
+
+		&:nth-of-type(4n) {
+			margin-right: 0;
+		}
+
+		// Lots of styles have moved to helpers for reuse.
+
+		ul {
+			list-style: none;
+			padding: 0; margin: $colSpacing/4 0 0;
+
+			li {
+				display: inline-block;
+				width: auto;
+				margin: 0 $colSpacing/2 0 0;
+
+				&:last-of-type {
+					margin: 0;
+				}
+			}
+		}
+	}
+}
+
+.parent-homes,
+.parent-region {
+
+	.post-children {
+
+		.img-container {
+
+			&:before {
+				content: 'View Home';
+			}
+		}
+	}
+}
+
+.parent-experiences,
+.parent-discover-cat,
+.parent-discover {
+	padding-top: $colSpacing;
+}
+
+.category {
+	.parent-discover,
+	.parent-homes {
+		padding: $colSpacing*4 $colSpacing*2;
+		position: relative;
+
+		header {
+			position: absolute;
+			top: 0; left: 0;
+			h2 {
+				transform: translateY(-50%);
+			}
+		}
+
+		.post-children {
+			margin-bottom: 0;
+		}
+	}
+
+	.parent-discover {
+		background-color: $light;
+	}
+
+	.parent-homes {
+		background-color: $white;
+	}
+
+}
+
+.parent-discover-cat {
+
+	.post-children {
+
+		.img-container {
+
+			&:before {
+				content: 'Discover';
+			}
+		}
+	}
+}
+
+.parent-experiences {
+
+	.post-children {
+
+		.img-container {
+
+			&:before {
+				content: 'View Experience';
+			}
+		}
+	}
+}
+
+.parent-discover {
+
+	.post-children {
+
+		&.guide-link {
+			.img-container {
+				&:before {
+					content: 'Get the guide';	
+				}
+			}
+		}
+
+		.img-container {
+
+			&:before {
+				content: 'Read Article';
+			}
+		}
+	}
+}

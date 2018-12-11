@@ -1,0 +1,57 @@
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+.site-footer {
+	height: auto;
+	text-align: center;
+	background-color: $bg;
+	max-width: 100%;
+	margin: 0;
+	padding: $colSpacing;
+	position: relative;
+	z-index: 5;
+
+	p, li {
+		font-size: $small;
+	}
+
+	p {
+		margin: $colSpacing 0 0;
+
+		a:hover {
+			color: $cta;
+		}
+	}
+
+	ul {
+		padding: 0;
+		margin: 0;
+		list-style: none;
+		
+		li {
+			display: inline-block;
+			padding: 0 $colSpacing*0.75;
+			border-right: 1px solid $light;
+
+			&:last-of-type {
+				border-right: 0;
+			}
+
+			a {
+				text-decoration: none;
+				color: $pri;
+
+				&:hover {
+					color: $cta;
+					border-bottom: 1px solid $cta;
+				}
+			}
+		}
+
+		.no-children {
+			color: lighten($pri, 50%);
+		}
+	}
+
+}

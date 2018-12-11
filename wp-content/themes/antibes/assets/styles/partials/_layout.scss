@@ -1,0 +1,99 @@
+/* ==========================================================================
+   Layout
+   ========================================================================== */
+
+#page {
+
+}
+
+.wrapper {
+	width: 100%;
+	max-width: $pageWidth;
+	margin: $colSpacing auto;
+}
+
+.wrapper-no-mar {
+	width: 100%;
+	max-width: $pageWidth;
+	margin: 0 auto;
+}
+
+.twoCol {
+	display: flex;
+	flex-direction: row;
+  align-items: stretch;
+
+	.col {
+		display: flex;
+		flex: 1;
+		align-items: center;
+		min-width: 35%;
+
+		span {
+			display: block;
+			padding: $colSpacing*2;
+		}
+
+	}
+
+	&.gutter {
+		margin-left: -$colSpacing*2;
+
+		.col {
+			padding-left: $colSpacing*2;
+		}
+	}
+}
+
+.intro {
+	text-align: center;
+	padding: $colSpacing*0.5 0 $colSpacing;
+
+	&.readWidth {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	hr {
+		margin: 0 auto $colSpacing;
+		width: $colSpacing;
+	}
+}
+
+
+#map_wrapper {
+	position: absolute;
+	right: 60%; left: $colSpacing;
+	top: $colSpacing;
+	z-index: 4;
+
+	&.fixed {
+		position: fixed;
+		top: $colSpacing*2;
+	}
+
+	#map_canvas {
+    width: 100%;
+    max-height: 70vh;
+    height: 100%;
+    position: absolute;
+    top: 0;
+	}
+
+	.gm-style-iw {
+		text-align: center!important;
+	}
+}
+
+#map {
+	width: 100%;
+	min-height: 400px;
+	height: 100%;
+}
+
+#map,
+#map_wrapper {
+	.gm-style-iw {
+		text-align: center!important;
+	}
+}

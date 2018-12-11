@@ -1,0 +1,171 @@
+/* ==========================================================================
+   Home Page Template
+   ========================================================================== */
+
+body.page-template-about {
+
+	.site-content {
+
+		.fold {
+			margin: 0 $colSpacing $colSpacing;
+			position: relative;
+			overflow: hidden;
+			height: 50vh;
+			min-height: 400px;
+
+			.about-tiles {
+				display: flex;
+				height: 100%;
+
+				.about-tile {
+					flex: 1;
+					position: relative;
+					height: 100%;
+					overflow: hidden;
+
+					img {
+						height: 100%;
+						max-width: none;
+						position: absolute;
+						left: 50%;
+						transform: translateX(-50%);
+					}
+				}
+			}
+		}
+
+		.quote-container {
+			position: relative;
+			max-width: $readWidth*1.25;
+			background-color: $white;
+			z-index: 9;
+			color: #fff;
+			color: $pri;
+			text-align: center;
+			padding: 0 $colSpacing*1.5 $colSpacing;
+			margin: 0 auto;
+
+			.avatar {
+				border: 5px solid $white;
+			}
+
+			h3 {
+				color: $cta;
+				margin-top: 2em;
+			}
+
+			blockquote {
+				position: relative;
+				padding: 0 $colSpacing;
+
+				&:before,
+				&:after {
+					color: $light;
+					font-family: serif;
+					font-weight: lighter;
+					font-size: 100px;
+					line-height: 100px;
+					position: absolute;
+					top: 50%;
+				}
+
+				&:before {
+					content: '\201C';
+					left: 0;
+					transform: translate(-50%, -50%);
+				}
+				&:after {
+					content: '\201D';
+					right: 0;
+					transform: translate(50%, -50%);
+				}
+			}
+
+			.signature {
+				position: absolute;
+				bottom: $colSpacing; left: 50%;
+				transform: translateX(-50%);
+			}
+		}
+
+		.intro {
+			padding: $colSpacing*1.5 0 $colSpacing*2;
+		}	
+
+		.the-promise {
+			display: flex;
+			flex-wrap: wrap;
+
+			aside {
+				flex: 1;
+				min-width: 40%;
+				padding: $colSpacing;
+				background-color: $white;
+				margin-left: $colSpacing;
+				text-align: center;
+				position: relative;
+
+				img {
+					position: absolute;
+					left: 50%; top: 0;
+					transform: translate(-50%, -50%);
+					width: 75px;
+					height: 75px;
+				}
+
+				&:nth-of-type(odd) {
+					margin-left: 0;
+				}
+				&:nth-of-type(n+3) {
+					margin-top: $colSpacing*2;
+				}
+
+				p {
+					margin-bottom: 0;
+				}
+
+				h3 {
+					color: $cta;
+				}
+			}
+		}
+
+		.for-owners {
+			margin-top: $colSpacing*2;
+
+			.twoCol {
+				flex-wrap: wrap;
+
+				.col {
+					background-color: $white;
+					display: inline-block;
+					padding: $colSpacing;
+					position: relative;
+
+					p:last-of-type {
+						margin: 2em 0 0;
+						padding-right: $colSpacing*3;
+						overflow: hidden;
+					}
+
+					&:last-of-type {
+						img {
+							position: absolute;
+							height: 100%; width: auto;
+							left: 0;
+							top: 0;
+						}
+					}
+
+					.button {
+						position: absolute;
+						bottom: $colSpacing;
+						transform: translateX(50%);
+						right: 0;
+						z-index: 2;
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,106 @@
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+
+:focus {
+	outline: none;
+}
+
+/* Gravity Forms */
+
+.gform_wrapper { }
+.gform_heading { }
+.gform_description { }
+.gform_body { }
+.gform_fields { }
+.gfield { }
+.ginput_container { }
+.gform_footer { }
+.gform_button { }
+
+
+.booking-form {
+
+	label, 
+	input[type="date"],
+	input[type="name"],
+	input[type="email"],
+	input[type="text"],
+	textarea {
+		width: 100%;
+		display: inline-block;
+		height: $colSpacing*1.5;
+		line-height: $colSpacing*1.5;
+		padding: 0 $colSpacing*0.25;
+		outline: none;
+	}
+
+	textarea {
+		height: $colSpacing*2;
+		line-height: 1.5em;
+		padding-top: $colSpacing/4;
+	}
+
+	label {
+		margin-top: 1em;
+
+		&:first-of-type {
+			margin-top: 0;
+		}
+	}
+
+	input[type="date"],
+	input[type="name"],
+	input[type="email"],
+	input[type="text"],
+	textarea {
+		background-color: $bg;
+		border: 1px solid $light;
+
+		&:focus {
+			border: 1px solid darken($light, 15%);
+		}
+	}
+
+	input[type="submit"] {
+		margin: $colSpacing auto 0;
+		display: block;
+
+		// Copied from Button Primary
+
+		text-transform: uppercase;
+		text-decoration: none;
+		font-family: 'Voltaire', sans-serif;
+		letter-spacing: 0.5px;
+		border-radius: $colSpacing*0.6;
+		border: 0;
+		line-height: $colSpacing*1.2;
+		height: $colSpacing*1.2;
+		display: inline-block;
+		padding: 1px $colSpacing*0.75 0!important;
+		background-color: $cta;
+		color: $white;
+		display: block;
+
+	}
+
+	p {
+		position: relative;
+	}
+
+	p.hb-check-dates-wrapper {
+		width: 100%;
+		margin: 0;
+	}
+
+	p.hb-people-wrapper {
+		width: 46%;
+		margin: 0;
+		text-align: center;
+
+		&.hb-people-wrapper-children {
+			margin-left: 8%;
+		}
+	}
+
+}

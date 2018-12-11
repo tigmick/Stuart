@@ -1,0 +1,54 @@
+/* ==========================================================================
+   Home Page Template
+   ========================================================================== */
+
+body.home {
+
+	.site-content {
+		position: relative;
+
+		.video {
+			position: relative;
+			margin: 0 $colSpacing;
+			min-height: 50vh;
+			overflow: hidden;
+
+		  video {
+				position: absolute;
+				top: 50%;
+				left: 0;
+				width: 100%;
+				height: auto;
+				transform: translateY(-50%);
+		  }
+		}
+
+		article {
+			width: auto;
+			position: absolute;
+			bottom: 0; left: 50%;
+			transform: translateX(-50%);
+			margin: 0 auto;
+			background-color: $bg;
+			padding: $colSpacing*0.75 $colSpacing 0;
+			text-align: center;
+			z-index: 2;
+
+			h1 {
+				margin: 0 0 $colSpacing*0.25;
+				white-space: nowrap;
+			}
+
+			h2 {
+				margin: 0;
+				font-size: 15px;
+				font-family: 'Open Sana', sans-serif;
+				font-weight: 300;
+			}
+
+			a {
+				margin: $colSpacing/2 0 0;
+			}
+		}
+	}
+}

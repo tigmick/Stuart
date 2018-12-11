@@ -1,0 +1,29 @@
+/* ==========================================================================
+   Variables
+   ========================================================================== */
+
+// Font Face
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300|Voltaire');
+
+
+// Structure
+$pageWidth: 1200px;
+$readWidth: 650px;
+
+$colSpacing: 30px;
+$br: 10px;
+
+// Colors
+$red: red;
+$blue: blue;
+
+$white: #fff;
+$bg: #F7F7F7;
+$cta: #E74436;
+$pri: #343437;
+$light: #E6E8E5;
+$darkBorder: lighten($pri, 20%);
+
+
+// Text Selection
+$selectionColor: $cta;

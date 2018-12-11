@@ -1,0 +1,19 @@
+/* ==========================================================================
+   Sprite sheet
+   ========================================================================== */
+
+$globalSprite: url('assets/images/sprites/global.png');
+$globalSpriteRetina: url('assets/images/sprites/global_2x.png');
+
+.sprite-global {
+	background: $globalSprite no-repeat;
+	text-indent: -20000px;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), 
+only screen and (min-device-pixel-ratio: 2) {
+	.sprite-global {
+		background-image: $globalSpriteRetina;
+		background-size: 140px 300px;
+	}
+}

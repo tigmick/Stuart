@@ -1,0 +1,57 @@
+/*!
+Theme Name: Antibes Rental
+Theme URI: antibes-rental.com
+Author: FLANK
+Author URI: https://talktoflank.com
+Description: Theme built on top of custom theme developed for Hand Picked Riviera
+Version: 1.0
+License: GNU General Public License v2.0
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+*/
+
+// Reset, Variables, Mixins, Etc
+// DO NOT EDIT ORDER OF FILES
+@import "partials/mixins";
+@import "partials/variables";
+@import "partials/normalize";
+
+// Globals
+@import "partials/h5bp-global";
+@import "partials/grid";
+@import "partials/spritesheet";
+@import "partials/general";
+
+// Layout
+@import "partials/layout";
+@import "partials/header";
+@import "partials/footer";
+
+// Menus, Page and Post styles
+@import "partials/menus";
+@import "partials/page-post";
+
+// Page Templates
+@import "partials/page-home";
+@import "partials/page-blog";
+@import "partials/page-grandchild";
+@import "partials/page-property";
+@import "partials/page-discover";
+@import "partials/page-experience";
+@import "partials/page-homes";
+@import "partials/page-category";
+@import "partials/page-about";
+
+// Widgets, Search, Comments, Forms, Sharing
+@import "partials/widgets";
+@import "partials/comments";
+@import "partials/forms";
+
+// Helper Classes, Print, Etc
+@import "partials/helpers";
+@import "partials/print";
+@import "partials/slick";
+@import "partials/slick-theme";
+@import "partials/popup";
+@import "partials/responsive";
+@import "partials/responsive-nav";
